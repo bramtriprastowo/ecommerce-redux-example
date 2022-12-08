@@ -1,0 +1,43 @@
+/* navbar */
+.navbar {
+  transition: top 0.4s;
+}
+.navbar-nav a {
+  font-size: 18px;
+}
+
+.cart-image {
+  width: 200px;
+}
+
+/* Cart */
+@media screen and (min-width: 992px) {
+  .cart-sm {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cart-btn-margin {
+    margin-left: 1rem;
+  }
+  .cart-btn-margin2 {
+    margin-left: 6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cart-image {
+    width: 90%;
+  }
+  .cart-btn-fs {
+    font-size: 12px!important;
+  }
+  .cart-btn-margin {
+    margin-left: 0.5rem;
+  }
+  .cart-btn-margin2 {
+    margin-left: 2rem;
+  }
+}
