@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <Fragment>
       <div className="d-flex justify-content-center">
-        <img src={ImgHero} alt="hero" width="90%" className="mt-2" />
+        <img src={ImgHero} alt="hero" width="80%" className="mt-2" />
       </div>
       <p className="text-center fs-6">
         <i>Image by Freepik</i>
@@ -42,8 +42,8 @@ const Home = () => {
                         height="250px"
                       />
                       <div className="card-body">
-                        <h5 className="card-title">{product.title}</h5>
-                        <p className="card-text lead fw-bold">
+                        <h5 className="card-title fs-6">{product.title}</h5>
+                        <p className="card-text lead fw-bold fs-5">
                           Rp{" "}
                           {product.price
                             ? (product.price * 12000).toLocaleString("id-ID")
@@ -61,7 +61,7 @@ const Home = () => {
                 );
               })
             : ""}
-            <Link to="/products" className="text-end fs-5 text-decoration-none text-black">More Products <i className="fa fa-arrow-right"></i></Link>
+            <Link to="/products" className="text-end fs-6 text-decoration-none text-black">More Products <i className="fa fa-arrow-right"></i></Link>
         </div>
       </div>
     </Fragment>

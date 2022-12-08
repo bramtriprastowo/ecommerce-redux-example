@@ -73,7 +73,7 @@ const Products = () => {
                       height="250px"
                     />
                     <div className="card-body">
-                      <h5 className="card-title">{product.title}</h5>
+                      <h5 className="card-title fs-6">{product.title}</h5>
                       <p className="card-text lead fw-bold">
                         Rp{" "}
                         {product.price

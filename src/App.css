@@ -3,7 +3,10 @@
   transition: top 0.4s;
 }
 .navbar-nav a {
-  font-size: 18px;
+  font-size: 16px;
+}
+a.nav-btn-text {
+  font-size: 14px;
 }
 
 .cart-image {

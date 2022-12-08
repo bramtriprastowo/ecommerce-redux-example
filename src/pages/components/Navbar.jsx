@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const cart = useSelector((state) => state.handleCart);
@@ -38,38 +38,38 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav mx-auto">
             <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="/">
+              <Link className="nav-link ms-2" aria-current="page" to="/">
                 Home
-              </NavLink>
+              </Link>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link ms-2" to="/products">
+              <Link className="nav-link ms-2" to="/products">
                 Products
-              </NavLink>
+              </Link>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link ms-2" to="/about">
+              <Link className="nav-link ms-2" to="/about">
                 About
-              </NavLink>
+              </Link>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link ms-2" to="/contact">
+              <Link className="nav-link ms-2" to="/contact">
                 Contact
-              </NavLink>
+              </Link>
             </li>
           </ul>
           <div className="buttons">
-            <NavLink to="#" className="btn btn-outline-dark">
+            <Link to="#" className="btn btn-outline-dark nav-btn-text">
               <i className="fa fa-sign-in me-1"></i> Login
-            </NavLink>
-            <NavLink to="#" className="btn btn-outline-dark ms-2">
+            </Link>
+            <Link to="#" className="btn btn-outline-dark ms-2 nav-btn-text">
               <i className="fa fa-user-plus me-1"></i> Register
-            </NavLink>
-            <NavLink to="/cart" className="btn btn-outline-dark ms-2">
+            </Link>
+            <Link to="/cart" className="btn btn-outline-dark ms-2 nav-btn-text">
               <i className="fa fa-shopping-cart me-1"></i> Cart ({itemCount})
-            </NavLink>
+            </Link>
           </div>
         </div>
       </div>
