@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import ImgHero from "../assets/bg-hero.jpg";
 import { Link } from "react-router-dom";
+import styles from "./Home.module.css";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -12,8 +13,7 @@ const Home = () => {
         .then((data) => setProducts(data.filter((product) => product.id < 5)))
         .catch((err) => console.log(err));
     };
-    getProducts()
-    .then(() => products ?? filterProduct);
+    getProducts().then(() => products ?? filterProduct);
   }, []);
 
   return (
@@ -30,38 +30,47 @@ const Home = () => {
             <p className="display-6 fw-bolder text-center">New Arrivals</p>
             <hr />
           </div>
+        </div>
+        <div className="row justify-content-center">
           {products
             ? products.map((product, index) => {
                 return (
                   <div className="col-6 col-md-4 col-xl-3 mb-4" key={index}>
-                    <div className="card h-100 p-4">
-                      <img
-                        src={product.image}
-                        className="card-img-top"
-                        alt={product.title}
-                        height="250px"
-                      />
-                      <div className="card-body">
-                        <h5 className="card-title fs-6">{product.title}</h5>
-                        <p className="card-text lead fw-bold fs-5">
-                          Rp{" "}
-                          {product.price
-                            ? (product.price * 12000).toLocaleString("id-ID")
-                            : "-"}
-                        </p>
-                        <Link
-                          to={`products/${product.id}`}
-                          className="btn btn-outline-dark"
-                        >
-                          Buy Now
-                        </Link>
-                      </div>
+                    <div className={`card h-100 ${styles.card}`}>
+                      <Link to={`products/${product.id}`}>
+                        <img
+                          src={product.image}
+                          className="card-img-top d-block"
+                          alt={product.title}
+                        />
+                        <div className={`card-body ${styles.cardBody}`}>
+                          <p className={`card-title ${styles.cardTitle}`}>
+                            {product.title}
+                          </p>
+                          <p className={`card-text fw-bold ${styles.cardText}`}>
+                            Rp{" "}
+                            {product.price
+                              ? (product.price * 12000).toLocaleString("id-ID")
+                              : "-"}
+                          </p>
+                          <p
+                            className={`text-uppercase fw-bold text-black-50 ${styles.cardCategory}`}
+                          >
+                            {product.category}
+                          </p>
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 );
               })
             : ""}
-            <Link to="/products" className="text-end fs-6 text-decoration-none text-black">More Products <i className="fa fa-arrow-right"></i></Link>
+          <Link
+            to="/products"
+            className="text-end fs-6 text-decoration-none text-black"
+          >
+            More Products <i className="fa fa-arrow-right"></i>
+          </Link>
         </div>
       </div>
     </Fragment>

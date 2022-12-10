@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addCart } from "../redux/action"
 import { Link } from "react-router-dom"
+import styles from "./Product.module.css"
 
 const Product = () => {
   const { id } = useParams();
@@ -23,19 +24,19 @@ const Product = () => {
 
   return (
     <Fragment>
-      <div className="container mt-5">
+      <div className="container my-5">
       {product ? 
         <div className="row">
-          <div className="col-md-6">
-            <img src={product.image} alt={product.title} width="400px" height="auto"/>
+          <div className="col-md-6 d-flex">
+            <img src={product.image} alt={product.title} className={`${styles.image} mb-4`}/>
           </div>
           <div className="col-md-6">
             <h4 className="text-uppercase text-black-50 fs-5">{product.category}</h4>
-            <h1 className="display-5">{product.title}</h1>
+            <h1 className={`display-5 ${styles.productTitle}`}>{product.title}</h1>
             <p className="lead fw-bolder">
             <i className="fa fa-star"></i> {" "} {product.rating && product.rating.rate}
             </p>
-            <h3 className="display-6 fw-bold my-4">Rp {product.price ? (product.price * 12000).toLocaleString('id-ID') : "-"}</h3>
+            <h3 className={`display-6 fw-bold my-4 ${styles.productPrice}`}>Rp {product.price ? (product.price * 12000).toLocaleString('id-ID') : "-"}</h3>
             <p className="lead">{product.description}</p>
             <button className="btn btn-outline-dark" onClick={() => dispatch(addCart(product))}>
               Add to Cart  

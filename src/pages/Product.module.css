@@ -1,0 +1,22 @@
+.image {
+    height: auto;
+    width: 400px;
+    max-height: 400px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.productTitle {
+    font-size: 2.2rem;
+}
+
+.productPrice {
+    font-size: 2.3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .image {
+        max-width: 70%;
+        max-height: 350px;
+    }
+}
