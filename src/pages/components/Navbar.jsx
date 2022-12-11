@@ -24,7 +24,7 @@ const Navbar = () => {
     >
       <div className="container">
         <a className="navbar-brand fw-bold fs-4" href="#">
-          GNA CER EN
+          eSTORE
         </a>
         <button
           className="navbar-toggler"
