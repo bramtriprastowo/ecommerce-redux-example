@@ -14,6 +14,11 @@
     font-size: 2.3rem;
 }
 
+.btnComment {
+    padding: 2px 6px;
+    font-size: 16px;
+}
+
 @media screen and (max-width: 768px) {
     .image {
         max-width: 70%;

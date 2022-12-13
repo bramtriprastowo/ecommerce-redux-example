@@ -13,7 +13,7 @@ const Home = () => {
         .then((data) => setProducts(data.filter((product) => product.id < 5)))
         .catch((err) => console.log(err));
     };
-    getProducts().then(() => products ?? filterProduct);
+    getProducts();
   }, []);
 
   return (
