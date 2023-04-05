@@ -22,7 +22,7 @@ const Products = () => {
 
   const filterProduct = (category) => {
     const updatedList = products.filter(
-      (product) => product.category === category
+      (product) => product.category.includes(category)
     );
     setFilter(updatedList);
   };

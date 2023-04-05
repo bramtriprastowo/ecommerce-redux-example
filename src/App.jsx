@@ -1,9 +1,8 @@
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 import './App.css'
 import Router from './config/Router'
 
 function App() {
-
   return (
     <Fragment>
       <Router />

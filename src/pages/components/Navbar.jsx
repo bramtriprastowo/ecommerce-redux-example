@@ -23,9 +23,9 @@ const Navbar = () => {
       className="navbar navbar-expand-lg bg-white py-3 shadow-sm sticky-top"
     >
       <div className="container">
-        <a className="navbar-brand fw-bold fs-4" href="#">
+        <span className="navbar-brand fw-bold fs-4">
           eSTORE
-        </a>
+        </span>
         <button
           className="navbar-toggler"
           type="button"
@@ -61,12 +61,6 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="buttons">
-            <Link to="#" className="btn btn-outline-dark nav-btn-text">
-              <i className="fa fa-sign-in me-1"></i> Login
-            </Link>
-            <Link to="#" className="btn btn-outline-dark ms-2 nav-btn-text">
-              <i className="fa fa-user-plus me-1"></i> Register
-            </Link>
             <Link to="/cart" className="btn btn-outline-dark ms-2 nav-btn-text">
               <i className="fa fa-shopping-cart me-1"></i> Cart ({itemCount})
             </Link>
